@@ -62,10 +62,13 @@ ul li {
     position: relative; /*limitando o link dentro desta lista a não ultrapassar a largura da lista*/
     max-height: 280px;  /*limitando a altura do li para enquadrar todo seu conteudo posteriormente*/
     overflow-y: hidden; /*ocultando o excedente da imagem que ultrapassa a altura máxim do li*/
+    overflow-x: hidden;
 }
 
 ul li img {
     width: 100%;        /*cada imagem deve ocupar 100% do espaço reservado acima na largura da linha*/
+    min-width: 452px;
+    min-height: 319px;
 }
 
 .overlay-imagem-link {
