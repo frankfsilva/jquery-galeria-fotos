@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Robot, sans-serif ;
+}
+
+header {
+    background-color:#5f27cd;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: center;
+    padding: 16px 0px;
+    color:#fff;
+    border-bottom: 16px solid #341f97;
+    font-style: italic;
+}
+
+header button {
+    margin-left: 16px;
+}
+
+form {
+    background-color: #c8d6e5;
+    padding: 24px 0px;
+    text-align: center;
+    display: none;  /* O formulário tem como defaul, neste projeto, não ficar visível*/
+}
+
+input, button {
+    padding: 8px 0px;
+}
+
+form h2 {
+    margin-bottom: 16px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(9, 143, 9);
+}
+
+#btn-cancelar {
+    background-color: red;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;    /*para se criar outra linha automaticamente quando necessário*/
+}
+
+ul li {
+    max-width: 25%;     /*largura máxima que cada elemento da lista pode percentualmente ocupar na horizontal da tela*/
+    list-style: none;   /*removendo os pontos nas listas*/
+    position: relative; /*limitando o link dentro desta lista a não ultrapassar a largura da lista*/
+    max-height: 280px;  /*limitando a altura do li para enquadrar todo seu conteudo posteriormente*/
+    overflow-y: hidden; /*ocultando o excedente da imagem que ultrapassa a altura máxim do li*/
+}
+
+ul li img {
+    width: 100%;        /*cada imagem deve ocupar 100% do espaço reservado acima na largura da linha*/
+}
+
+.overlay-imagem-link {
+    padding: 16px;;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute; /*colocando o link no canto inferior do li*/
+    bottom: 0;          /*colocando o link na extremidade*/
+    left: o;
+    width: 100%;        /*link ocupando toda a largura*/
+    opacity: 0;         /*removendo a opacidade do link para ele ficar apagado*/
+    transition: all ease 1s;   /*transição entre o apagar e aparecer do text com link*/   
+}
+
+.overlay-imagem-link a {    
+    color: #fff;             /*alterando a cor do link*/
+    text-decoration: none;     /*removendo o sublinhado do link*/      
+}
+
+ul li:hover .overlay-imagem-link {  /*hover-> quando o cursor está sobre algo*/
+    opacity: 1;
+}
